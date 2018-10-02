@@ -55,11 +55,14 @@ flags.DEFINE_boolean(
 )
 FLAGS = flags.FLAGS
 
+tf.logging.set_verbosity(tf.logging.INFO)
 
 def main(unused_argv):
   flags.mark_flag_as_required('model_dir')
   flags.mark_flag_as_required('pipeline_config_path')
-  config = tf.estimator.RunConfig(model_dir=FLAGS.model_dir)
+  config = tf.estimator.RunConfig(model_dir=FLAGS.model_dir,
+                                  save_checkpoints_steps=500,
+                                  keep_checkpoint_max=None)
 
   train_and_eval_dict = model_lib.create_estimator_and_inputs(
       run_config=config,
@@ -86,7 +89,6 @@ def main(unused_argv):
       input_fn = eval_input_fns[0]
     if FLAGS.run_once:
       estimator.evaluate(input_fn,
-                         num_eval_steps=None,
                          checkpoint_path=tf.train.latest_checkpoint(
                              FLAGS.checkpoint_dir))
     else:
