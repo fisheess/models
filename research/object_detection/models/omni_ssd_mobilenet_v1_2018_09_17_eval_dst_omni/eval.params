@@ -1,0 +1,6 @@
+python model_main.py
+--pipeline_config_path=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17_eval_dst_omni/omni_ssd_mobilenet_v1_eval.config \ 
+--model_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17_eval_dst_omni/ \ 
+--checkpoint_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17 \ 
+--run_once=true \ 
+--alsologtostderr

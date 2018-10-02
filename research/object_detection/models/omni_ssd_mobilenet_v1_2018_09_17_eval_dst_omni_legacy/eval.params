@@ -1,0 +1,6 @@
+ python legacy/eval.py
+ --pipeline_config_path=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17_eval_dst_omni_legacy/omni_ssd_mobilenet_v1_eval.config
+\
+--eval_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17_eval_dst_omni_legacy/
+\
+--checkpoint_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_17

@@ -1,0 +1,8 @@
+python model_main.py
+--pipeline_config_path=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_10/omni_ssd_mobilenet_v1_person.config
+\
+--model_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_mobilenet_v1_2018_09_10/
+\
+--num_train_steps=30000
+\
+--alsologtostderr

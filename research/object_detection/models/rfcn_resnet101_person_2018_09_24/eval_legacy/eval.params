@@ -1,0 +1,6 @@
+python legacy/eval.py
+--pipeline_config_path=/home/yjin/DL/tensorflow/models/research/object_detection/models/rfcn_resnet101_person_2018_09_24/eval_legacy/pipeline.config
+\
+--checkpoint_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/rfcn_resnet101_person_2018_09_24/
+\
+--eval_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/rfcn_resnet101_person_2018_09_24/eval_legacy/

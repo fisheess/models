@@ -1,0 +1,6 @@
+python model_main.py
+--pipeline_config_path=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_resnet50_v1_fpn_2018_10_01/eval/pipeline.config
+\
+--model_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_resnet50_v1_fpn_2018_10_01/eval/
+\
+--checkpoint_dir=/home/yjin/DL/tensorflow/models/research/object_detection/models/omni_ssd_resnet50_v1_fpn_2018_10_01/
