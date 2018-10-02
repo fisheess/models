@@ -1,0 +1,29 @@
+item {
+  id: 1
+  name: 'person'
+}
+
+item {
+  id: 2
+  name: 'wheeled walker'
+}
+
+item {
+  id: 3
+  name: 'chair'
+}
+
+item {
+  id: 4
+  name: 'armchair'
+}
+
+item {
+  id: 5
+  name: 'table'
+}
+
+item {
+  id: 6
+  name: 'tv'
+}
