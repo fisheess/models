@@ -53,6 +53,14 @@ flags.DEFINE_boolean(
     'run_once', False, 'If running in eval-only mode, whether to run just '
     'one round of eval vs running continuously (default).'
 )
+flags.DEFINE_integer(
+    'save_checkpoints_steps', 100, 'Save the checkpoint and evaluate every n'
+    'setps')
+flags.DEFINE_integer(
+    'save_summary_steps', 100, 'Save summaries every n steps')
+flags.DEFINE_integer(
+    'keep_checkpoint_max', None, 'Maximum number of checkpoints to save. Older'
+    'checkpoints beyond this boundary will be deleted. Set None to keep all.')
 FLAGS = flags.FLAGS
 
 tf.logging.set_verbosity(tf.logging.INFO)
@@ -61,8 +69,9 @@ def main(unused_argv):
   flags.mark_flag_as_required('model_dir')
   flags.mark_flag_as_required('pipeline_config_path')
   config = tf.estimator.RunConfig(model_dir=FLAGS.model_dir,
-                                  save_checkpoints_steps=500,
-                                  keep_checkpoint_max=None)
+                                  save_summary_steps=FLAGS.save_summary_steps,
+                                  save_checkpoints_steps=FLAGS.save_checkpoints_steps,
+                                  keep_checkpoint_max=FLAGS.keep_checkpoint_max)
 
   train_and_eval_dict = model_lib.create_estimator_and_inputs(
       run_config=config,

@@ -426,6 +426,7 @@ def create_model_fn(detection_model_fn, configs, hparams, use_tpu=False):
         keep_checkpoint_every_n_hours = (
             train_config.keep_checkpoint_every_n_hours)
         saver = tf.train.Saver(
+            max_to_keep=None,
             variables_to_restore,
             keep_checkpoint_every_n_hours=keep_checkpoint_every_n_hours)
         scaffold = tf.train.Scaffold(saver=saver)
